@@ -1,49 +1,80 @@
 import { NavLink } from "react-router";
 import logoImg from "~/assets/image/logo.png"
+import fbIcon from "~/assets/image/fb.svg"
+import instIcon from "~/assets/image/inst.svg"
+import xIcon from "~/assets/image/x.svg"
+
 export default function Footer() {
     const navItems = [
-        { name: "portfolio", path: "/portfolio" },
-        { name: "How It Works", path: "/About-US" },
-        { name: "Pricing", path: "/Our-App" },
-        { name: "About", path: "/Contacts" },
-        { name: "Login", path: "/Contacts" },
+        { name: "Home", path: "/" },
+        { name: "News", path: "/news" },
+        { name: "Contact", path: "/contract" },
+    ];
+
+    const socItems = [
+        { img: fbIcon, path: "/" },
+        { img: instIcon, path: "/" },
+        { img: xIcon, path: "/" },
     ];
     return (
-        <footer id="footer">
-            <div className="footer-top-part">
+        <footer id="footer" className="w-full bg-[#080b13] border-t border-slate-800/80 py-12 px-4 flex flex-col items-center text-center space-y-8">
 
-                <img
-                    className="logo"
-                    src={logoImg}
-                    alt="Pixelab"
-                />
-
-                <p className="copy-right-info">
-                    © 2020 Epixelab. All rights reserved.
+            {/* Top Part: Logo & Subtext */}
+            <div className="flex flex-col items-center max-w-xl">
+              <img
+                className="h-30 w-auto object-contain "
+                src={logoImg}
+                alt="RiftWire"
+            />
+                <p className="text-gray-400 text-xs sm:text-base leading-relaxed max-w-lg">
+                    RiftWire — Esports news, stories, and insights for the competitive gaming world.
                 </p>
+            </div>
 
-                <nav className="nav-menu">
-                    {navItems.map((item) => (
-                        <NavLink
-                            key={item.name}
-                            to={item.path}
-                            className={({ isActive }) =>
-                                `nav-link ${isActive ? "active" : ""}`
+            {/* Navigation Links */}
+            <nav className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 text-xs sm:text-sm font-semibold uppercase tracking-widest">
+                {navItems.map((item) => (
+                    <NavLink
+                        key={item.name}
+                        to={item.path}
+                    className={({ isActive }) =>
+                                `px-1 py-1 font-p text-base font-bold uppercase tracking-widest transition-all duration-150 ${isActive
+                                    ? "text-p"
+                                    : "text-white hover:text-p"
+                                }`
                             }
-                        >
-                            {item.name}
-                        </NavLink>
-                    ))}
-                </nav>
+                    >
+                        {item.name}
+                    </NavLink>
+                ))}
+            </nav>
 
-            </div>
+            {/* Social Media Icons */}
+            <nav className="flex items-center justify-center gap-4">
+                {socItems.map((item, index) => (
+                    <a
+                        key={index}
+                        href={item.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-16 h-16 rounded-full px-2  flex items-center justify-center text-slate-400   hover:-translate-y-0.5 transition-all duration-300 group"
+                    >
+                        <img
+                            src={item.img}
+                            alt="Social Icon"
+                            className="w-15 h-15 object-contain transition-opacity"
+                        />
+                    </a>
+                ))}
+            </nav>
 
-            <div className="footer-bottom-part">
-                <p>
-                    Startup Framework contains components and complex blocks
-                    which can easily be integrated into almost any design.
+            {/* Divider & Copyright */}
+            <div className="w-full max-w-2xl border-t border-slate-800/80 pt-6">
+                <p className="text-slate-500 text-xs font-mono tracking-wider">
+                    © 2026 Rift Wire. All rights reserved.
                 </p>
             </div>
+
         </footer>
     )
 }
