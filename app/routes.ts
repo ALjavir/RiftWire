@@ -12,6 +12,7 @@ export default [
     layout("./routes/layout/layout.tsx", [
         index("./routes/home.tsx"),
         route("news", "routes/news.tsx"),
+        route("news/:id", "routes/news-detail.tsx"),
         route("contract", "routes/contract.tsx"),
     ]),
 

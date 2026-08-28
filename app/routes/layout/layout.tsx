@@ -1,7 +1,7 @@
-import TopNavBar from "~/components/common/topnavbar/topNavbar";
+import TopNavBar from "~/components/common/topNavbar";
 
 import { Outlet } from "react-router";
-import Footer from "~/components/common/footer/footer";
+import Footer from "~/components/common/footer";
 import type { Route } from "./+types/layout";
 
 

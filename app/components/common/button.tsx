@@ -9,7 +9,7 @@ export  function ButtonLarge({ text, path, }: buttonLargeInt) {
     return (
     <a
     href={path}
-    className="inline-flex w-fit cursor-pointer items-center px-8 py-3 text-lg font-medium text-white uppercase tracking-widest transition-all duration-0  bg-[linear-gradient(315deg,#0bc4e2_0%,#2c8cc2_100%)] hover:bg-none hover:bg-p"
+    className="inline-flex w-fit cursor-pointer items-center px-8 py-3 text-base lg:text-lg  font-medium text-white uppercase tracking-widest transition-all duration-0  bg-[linear-gradient(315deg,#0bc4e2_0%,#2c8cc2_100%)] hover:bg-none hover:bg-p"
     style={{
         borderRadius: text === "Sign Up" ? "0px" : "5px",
         clipPath: text === "Sign Up" ? "polygon(0 0, 100% 0, calc(100% - 16px) 100%, 0 100%)" : undefined

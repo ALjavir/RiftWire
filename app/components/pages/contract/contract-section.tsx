@@ -1,4 +1,4 @@
-import { ButtonLarge } from "~/components/common/button/button";
+import { ButtonLarge } from "~/components/common/button";
 
 export default function ContractSec() {
     return (

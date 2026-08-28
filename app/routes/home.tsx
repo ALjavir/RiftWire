@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import imgT from "../assets/image/testimg.jpeg";
 import { getNewsData } from "../service/myJasonData";
 import HomeHeroSection from "~/components/pages/home/hero-section";
-import HomeNewsSec from "~/components/pages/home/news-section";
-import { ButtonLarge } from "~/components/common/button/button";
-import NewsSec from "~/components/pages/home/news-section";
+import HomeNewsSec from "~/components/pages/news/news-section";
+import { ButtonLarge } from "~/components/common/button";
+import NewsSec from "~/components/pages/news/news-section";
 import ContractSec from "~/components/pages/contract/contract-section";
 import routes from "~/routes";
 

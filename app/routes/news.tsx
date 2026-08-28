@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getNewsData } from "../service/myJasonData";
-import NewsSec from "~/components/pages/home/news-section";
+import NewsSec from "~/components/pages/news/news-section";
 export default function News() {
       const [newsData, setNewsData] = useState<any[]>([])
       useEffect(() => {

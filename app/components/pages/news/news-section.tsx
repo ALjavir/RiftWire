@@ -1,11 +1,11 @@
-import { ButtonSmall } from "~/components/common/button/button"
+import { ButtonSmall } from "~/components/common/button"
 
 interface NewsInt {
     newsDataInt: any[]
 }
 export default function NewsSec({ newsDataInt }: NewsInt) {
     return (
-        <section id="home-news-sec" className="w-full max-w-9/12 mx-auto px-6 py-12">
+        <section id="home-news-sec" className="w-full max-w-10/12 mx-auto py-12">
 
             <div className="text-center py-20 mb-10  space-y-2">
                 <h1 className="font-s text-4xl sm:text-6xl font-bold text-g tracking-wider uppercase">
@@ -59,7 +59,7 @@ export default function NewsSec({ newsDataInt }: NewsInt) {
                            
                             <div className="pt-2">
                                 <ButtonSmall
-                                    path=""
+                                 path={`/news/${data.id}`}
                                     text="READ MORE"
                                   
                                 />
