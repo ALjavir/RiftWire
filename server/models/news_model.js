@@ -27,7 +27,7 @@ const contentBlockSchema = new mongoose.Schema({
   } 
 }, { _id: false });
 
-// 2. Define the main News schema
+
 const newsSchema = new mongoose.Schema({
     title: {
         type: String,
