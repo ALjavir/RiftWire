@@ -52,7 +52,7 @@ export default function HomeHeroSection({ homeHeroIntdata }: HomeHeroInt) {
                         </div>
                         
                         <p className="text-gray-400 font-semibold font-mono tracking-wider text-xs md:text-sm uppercase pb-2 md:pb-4">
-                            ESPORTS <span className="mx-1">|</span> {data.date}
+                            {data.category} <span className="mx-1">|</span> {data.date}
                         </p>
 
                       
@@ -64,7 +64,7 @@ export default function HomeHeroSection({ homeHeroIntdata }: HomeHeroInt) {
                             {data.shortDescription}
                         </p>
                         
-                        <ButtonLarge text={"READ MORE"} path={`/news/${data.id}`} />
+                        <ButtonLarge text={"READ MORE"} path={`/news/${data._id}`} />
                     </div>
                 </div>
             </div>
