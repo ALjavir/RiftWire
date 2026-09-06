@@ -9,12 +9,13 @@ export default function NewsDetail() {
   const { id } = useParams();
   const [article, setArticle] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-
+ console.log("Fetched article:", id);
   useEffect(() => {
     async function fetchArticle() {
       try {
         const data = await getNewsData();
         const found = data.find((item: any) => String(item.id) === String(id));
+       
         setArticle(found);
       } catch (err) {
         console.error("Error fetching article:", err);

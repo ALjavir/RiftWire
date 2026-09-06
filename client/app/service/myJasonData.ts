@@ -6,7 +6,7 @@ export async function getNewsData(): Promise<any[]> {
       throw new Error(`Failed to load data: ${res.statusText}`);
     }
     const data = await res.json(); 
-    return data;
+    return data.data;
   } catch (error) {
     console.error("Error fetching news data:", error);
     throw error;

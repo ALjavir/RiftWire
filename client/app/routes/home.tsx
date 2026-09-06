@@ -17,6 +17,7 @@ export default function Home() {
     async function init() {
       try {
         const data = await getNewsData();
+        
         setHeroData(data.slice(0, 4));
         setNewsData(data.slice(4, 10));
       } catch (error) {

@@ -19,6 +19,7 @@ export default function NewsDetailPageHero({newsDetailesPageData}: newsDetailesP
         className="inline-flex items-center text-xs font-mono text-cyan-400 hover:text-cyan-300 gap-2 uppercase tracking-wider transition-colors"
       >
         ← BACK TO ALL NEWS
+          <h1>{newsDetailesPageData._id}</h1>
       </Link>
 
       {/* Header Info */}
