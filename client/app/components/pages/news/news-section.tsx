@@ -62,7 +62,7 @@ export default function NewsSec({ newsDataInt }: NewsInt) {
                            
                             <div className="pt-2">
                                 <ButtonSmall
-                                 path={`/news/${data.id}`}
+                                 path={`/news/${data._id}`}
                                     text="READ MORE"
                                   
                                 />

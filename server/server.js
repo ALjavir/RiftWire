@@ -3,7 +3,9 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import newsRoutes from "./routes/news_routes.js";
+import dns from "dns";
 
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
 dotenv.config(); 
 connectDB();
 

@@ -5,6 +5,7 @@ import NewsDetailPageHero from "~/components/pages/detailsPage/news/hero";
 import ContentSec from "~/components/pages/detailsPage/news/contents";
 
 
+
 export default function NewsDetail() {
   const { id } = useParams();
   const [article, setArticle] = useState<any>(null);
@@ -13,10 +14,10 @@ export default function NewsDetail() {
   useEffect(() => {
     async function fetchArticle() {
       try {
-        const data = await getNewsData();
-        const found = data.find((item: any) => String(item.id) === String(id));
-       
-        setArticle(found);
+       const res = await fetch(`http://localhost:5000/api/news/${id}`);
+      const result = await res.json();
+
+        setArticle(result.data);
       } catch (err) {
         console.error("Error fetching article:", err);
       } finally {
